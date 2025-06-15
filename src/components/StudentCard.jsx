@@ -8,7 +8,7 @@ import { Link } from 'react-router'
 function StudentCard({ id, name, city, loadStudents }) {
 
     const deleteStudent = async () => {
-        const response = await axios.delete(`http://localhost:5001/students/${id}`)
+        const response = await axios.delete(`https://student-server-uj6r.onrender.com/students/${id}`)
         if (response.data.success) {
             toast.success(response.data.message)
             loadStudents()
