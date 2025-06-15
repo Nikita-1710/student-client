@@ -12,7 +12,7 @@ function Add() {
 
     const addStudent = async () => {
         try {
-            const response = await axios.post("https://student-server-uj6r.onrender.com/students", {
+            const response = await axios.post(`${import.meta.env.VITE_API_URL}/students`, {
                 id: student.id,
                 name: student.name,
                 city: student.city
