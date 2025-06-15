@@ -15,7 +15,7 @@ function Edit() {
 
     const editStudent = async () => {
         try {
-            const response = await axios.put(`http://localhost:5001/students/${userId}`, {
+            const response = await axios.put(`https://student-server-uj6r.onrender.com/students/${userId}`, {
                 name: student.name,
                 city: student.city
             })
@@ -33,7 +33,7 @@ function Edit() {
 
     const loadStudent = async () => {
         try {
-            const response = await axios.get(`http://localhost:5001/students/${userId}`)
+            const response = await axios.get(`https://student-server-uj6r.onrender.com/students/${userId}`)
             setStudent(response.data.data)
         }
         catch (e) {
